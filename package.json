@@ -1,11 +1,15 @@
 {
+  "version": "0.0.1",
+  "licence": "MIT",
   "dependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@vue/compiler-sfc": "^3.0.0-alpha.4",
     "babel-jest": "^25.1.0",
-    "babel-plugin-add-module-exports": "^1.0.2",
     "jest": "^25.1.0",
     "vue": "3.0.0-alpha.4"
+  },
+  "scripts": {
+    "test": "yarn jest"
   }
 }
