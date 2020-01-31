@@ -1,17 +1,14 @@
-import * as vue from 'vue'
-import * as Component from './Hello.vue'
+import { createApp } from 'vue'
+import Component from './Hello.vue'
 
 test('It works', () => {
-  console.log(Component.render)
+  console.log(Component)
   document.getElementsByTagName('html')[0].innerHTML = '';
   const el = document.createElement('div')
   el.id = 'app'
   document.body.appendChild(el)
 
-  vue.createApp({ 
-    render: Component.render
-    // render: () => vue.h('div', 'HI!') 
-  }).mount('#app')
+  createApp(Component).mount('#app')
 
   console.log(document.body.outerHTML)
 })

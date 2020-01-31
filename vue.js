@@ -14,10 +14,12 @@ module.exports.process = function process(source) {
     filename: 'hello.vue',
     presets: [jestPreset]
   })
-
   const babelTemplate = babelify(templateTagContent.code).code
   const babelScript = babelify(scriptTagContent).code
-  const code = babelScript + '\n' + babelTemplate
-  console.log(code)
+
+  const code = babelify(
+    templateTagContent.code + '\n' + scriptTagContent
+  ).code + '\nexports.default = {..._default, render};'
+  
   return code
 }
