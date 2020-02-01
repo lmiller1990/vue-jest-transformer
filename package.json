@@ -1,6 +1,7 @@
 {
+  "name": "vue-jest-transformer",
   "version": "0.0.1",
-  "licence": "MIT",
+  "license": "MIT",
   "description": "Vue 3 component transformer for Jest",
   "keywords": [
     "vue", "jest", "transformer"
