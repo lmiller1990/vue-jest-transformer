@@ -14,7 +14,7 @@ const getComponentMarkup = () => document.querySelector('#app').innerHTML
 
 test('Compiles a basic vue component', () => {
   createApp(Component).mount('#app')
-  expect(getComponentMarkup()).toBe('<div>Hello</div>')
+  expect(getComponentMarkup()).toBe('<div>Hello World</div>')
 })
 
 test('Compiles component with TypeScript', () => {
