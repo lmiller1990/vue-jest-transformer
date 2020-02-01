@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 
-import Component from './fixtures/Basic.vue'
+// import Component from './fixtures/Basic.vue'
+import TypeScript from './fixtures/TypeScript.vue'
 
 beforeEach(() => {
   document.getElementsByTagName('html')[0].innerHTML = '';
@@ -11,7 +12,12 @@ beforeEach(() => {
 
 const getComponentMarkup = () => document.querySelector('#app').innerHTML
 
-test('Compiles a basic vue component', () => {
-  createApp(Component).mount('#app')
+// xtest('Compiles a basic vue component', () => {
+//   createApp(Component).mount('#app')
+//   expect(getComponentMarkup()).toBe('<div>Hello</div>')
+// })
+
+test.only('Compiles component with TypeScript', () => {
+  createApp(TypeScript).mount('#app')
   expect(getComponentMarkup()).toBe('<div>Hello</div>')
 })

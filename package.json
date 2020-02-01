@@ -7,9 +7,10 @@
     "@vue/compiler-sfc": "^3.0.0-alpha.4",
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0",
+    "typescript": "^3.7.5",
     "vue": "3.0.0-alpha.4"
   },
   "scripts": {
-    "test": "yarn jest"
+    "test": "yarn jest --no-cache"
   }
 }

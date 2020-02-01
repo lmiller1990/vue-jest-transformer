@@ -1,5 +1,5 @@
-const { transform } = require('@babel/core');
-const jestPreset = require('babel-preset-jest');
+const { transform } = require('@babel/core')
+const jestPreset = require('babel-preset-jest')
 const { parse, compileTemplate, compileStyle } = require('@vue/compiler-sfc')
 
 module.exports.process = function process(source) {
@@ -14,12 +14,20 @@ module.exports.process = function process(source) {
     filename: 'hello.vue',
     presets: [jestPreset]
   })
-  const babelTemplate = babelify(templateTagContent.code).code
-  const babelScript = babelify(scriptTagContent).code
+
+  let scriptTag = ''
+  if (parsed.descriptor.script.lang === 'ts') {
+    const typescript = require('typescript')
+    scriptTag = typescript.transpileModule(scriptTagContent, {}).outputText
+  } else {
+    scriptTag = babelify(scriptTagContent).code
+  }
+
+  console.log(scriptTag)
 
   const code = babelify(
-    templateTagContent.code + '\n' + scriptTagContent
+    templateTagContent.code + '\n' + scriptTag
   ).code + '\nexports.default = {..._default, render};'
-  
+
   return code
 }
