@@ -1,6 +1,10 @@
 {
   "version": "0.0.1",
   "licence": "MIT",
+  "description": "Vue 3 component transformer for Jest",
+  "keywords": [
+    "vue", "jest", "transformer"
+  ],
   "dependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
@@ -12,5 +16,10 @@
   },
   "scripts": {
     "test": "yarn jest --no-cache"
+  },
+  "homepage": "https://github.com/lmiller1990/vue-jest-transformer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmiller1990/vue-jest-transformer.git"
   }
 }
