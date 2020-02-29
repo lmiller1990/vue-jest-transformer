@@ -1,19 +1,21 @@
 {
   "name": "@lmiller1990/vue-jest-transformer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "Vue 3 component transformer for Jest",
   "keywords": [
     "vue", "jest", "transformer"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
-    "@vue/compiler-sfc": "^3.0.0-alpha.4",
+    "@vue/compiler-sfc": "^3.0.0-alpha.7",
+    "vue": "^3.0.0-alpha.7"
+  },
+  "devDependencies": {
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0",
-    "typescript": "^3.7.5",
-    "vue": "3.0.0-alpha.4"
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "test": "yarn jest --no-cache"
